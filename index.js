@@ -8,7 +8,7 @@ const io=require('socket.io')(server,{
 const PORT=4000||process.env.PORT
 
 app.get('/',(req,res)=>{
-    res.send("<h1>hlooo gyssss</h1>")
+    res.send("<h1>hlooo</h1>")
 })
 io.on("connection",(socket)=>{
         
