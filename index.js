@@ -1,11 +1,11 @@
-const app=require('express')
+const app=require('express')()
 const server=require('http').createServer(app)
 const io=require('socket.io')(server,{
     cors:{
         origin:"*"
     }
 })
-const PORT=7000||process.env.PORT
+const PORT=4000||process.env.PORT
 
 app.get('/',(req,res)=>{
     res.send("<h1>hlooo gyssss</h1>")
@@ -34,5 +34,5 @@ io.on("connection",(socket)=>{
     })
 
 server.listen(PORT,()=>{
-    console.log(`Iam Listening at port:${PORT}`);
+    console.log(`Server Listening at port:${PORT}`);
 })
